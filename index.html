@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Safety Card - Novapharm Production</title>
+  <style>
+    :root {
+      --primary: #a80000;
+      --primary-light: #fff1f2;
+      --secondary: #3b82f6;
+      --dark: #1f2937;
+      --gray: #6b7280;
+      --border: #e5e7eb;
+      --white: #ffffff;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background-color: #f9fafb;
+      color: var(--dark);
+      line-height: 1.6;
+    }
+
+    .container { max-width: 850px; margin: 0 auto; padding: 20px; }
+
+    /* الهيدر */
+    .header {
+      background: linear-gradient(135deg, var(--primary), #7f0000);
+      color: var(--white);
+      padding: 30px 20px;
+      border-radius: 20px;
+      text-align: center;
+      margin-bottom: 25px;
+    }
+    .header h1 { margin: 0; font-size: 24px; }
+    .header p { margin: 10px 0 0; opacity: 0.9; }
+
+    /* الشبكة */
+    .main-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+    .full-width { grid-column: span 2; }
+
+    .section-card {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 20px;
+      border: 1px solid var(--border);
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    }
+
+    .section-title {
+      font-size: 18px;
+      font-weight: bold;
+      color: var(--primary);
+      margin-bottom: 15px;
+      border-bottom: 2px solid var(--primary-light);
+      padding-bottom: 8px;
+    }
+
+    /* الإسعافات الأولية */
+    .aid-item { margin-bottom: 15px; border-bottom: 1px solid #f3f4f6; padding-bottom: 10px; }
+    .aid-item:last-child { border-bottom: none; }
+    .aid-ar { display: block; font-weight: bold; color: var(--dark); }
+    .aid-fr { display: block; color: var(--gray); font-style: italic; font-size: 14px; margin-top: 2px; }
+
+    /* أزرار الاتصال */
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 20px; }
+    .contact-item { padding: 15px; border-radius: 12px; text-align: center; border: 1px solid var(--border); }
+    
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 15px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: bold;
+      color: var(--white);
+      transition: 0.2s;
+    }
+    .btn-emergency { background: var(--primary); }
+    .btn-call { background: var(--secondary); }
+    .btn-fds { background: var(--dark); width: 100%; margin-top: 20px; border: 2px solid #fff; }
+
+    @media (max-width: 768px) {
+      .main-grid, .contact-grid { grid-template-columns: 1fr; }
+      .full-width { grid-column: span 1; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  
+  <header class="header">
+    <p>NOVAPHARM PRODUCTION</p>
+    <h1>بطاقة الطوارئ الرقمية | Carte d'urgence</h1>
+    <p>HYDRANAL™ Composite 5</p>
+  </header>
+
+  <div class="main-grid">
+    
+    <section class="section-card full-width">
+      <div class="section-title">⚠️ تحديد المخاطر / Identification</div>
+      <div style="background: var(--primary-light); border-right: 4px solid var(--primary); padding: 12px; border-radius: 8px;">
+        <strong>H360D: قد يضر الجنين / Peut nuire au fœtus</strong>
+        <br><strong>H351: يُشتبه في تسببه بالسرطان / Cancer suspecté</strong>
+        <br><strong>H373: خطر على الكبد / Risque pour le foie</strong>
+      </div>
+    </section>
+
+    <section class="section-card full-width">
+      <div class="section-title">🩺 الإسعافات الأولية / Premiers Secours</div>
+      
+      <div class="aid-item">
+        <span class="aid-ar">الاستنشاق: نقل المصاب إلى الهواء الطلق والراحة التامة.</span>
+        <span class="aid-fr">Inhalation: Transporter la victime à l'air frais et repos total.</span>
+      </div>
+
+      <div class="aid-item">
+        <span class="aid-ar">ملامسة العين: غسل فوري بالماء الوفير لمدة 15 دقيقة واستشارة طبيب.</span>
+        <span class="aid-fr">Contact oculaire: Rincer immédiatement à l'eau pendant 15 min; consulter un médecin.</span>
+      </div>
+
+      <div class="aid-item">
+        <span class="aid-ar">الابتلاع: شرب الماء بكثرة، وعدم تحفيز القيء، والاتصال بالإسعاف فوراً.</span>
+        <span class="aid-fr">Ingestion: Boire beaucoup d'eau, ne pas faire vomir, appeler les secours immédiatement.</span>
+      </div>
+    </section>
+
+    <section class="section-card full-width">
+      <div class="section-title">☎️ أرقام الاتصال السريع / Contacts d'urgence</div>
+      
+      <div class="contact-grid">
+        <div class="contact-item" style="background: #fef2f2;">
+          <small>الحماية المدنية</small>
+          <div style="font-size: 20px; font-weight: bold; color: var(--primary);">14 / 1021</div>
+        </div>
+        <div class="contact-item" style="background: #eff6ff;">
+          <small>مسؤول HSE</small>
+          <div style="font-size: 18px; font-weight: bold; color: var(--secondary);">0560810682</div>
+        </div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+        <a href="tel:14" class="btn btn-emergency">🚑 اتصال سريع (14)</a>
+        <a href="tel:0560810682" class="btn btn-call">📞 اتصال بالمسؤول</a>
+      </div>
+    </section>
+
+    <section class="section-card full-width">
+      <div class="section-title">📌 معلومات المادة وتحميل الملفات</div>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; font-size: 14px; margin-bottom: 10px;">
+        <div><strong>اللون:</strong> بني (يحتوي على اليود)</div>
+        <div><strong>الكثافة:</strong> 1.17 g/mL</div>
+        <div><strong>رقم CAS:</strong> 288-32-4</div>
+        <div><strong>الحالة:</strong> سائل / Liquide</div>
+      </div>
+
+      <a href="https://assets.fishersci.com/TFS-Assets/CCG/EU/SDS/SDS_15644440_FR.pdf" 
+         target="_blank" 
+         rel="noopener noreferrer" 
+         class="btn btn-fds">
+        <span>📥</span> تحميل ملف FDS الكامل (PDF)
+      </a>
+    </section>
+
+  </div>
+
+  <footer style="text-align: center; margin-top: 25px; color: var(--gray); font-size: 12px; padding-bottom: 20px;">
+    NOVAPHARM PRODUCTION &copy; 2026
+  </footer>
+
+</div>
+
+</body>
+</html>
